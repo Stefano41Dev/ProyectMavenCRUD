@@ -45,8 +45,9 @@ public class TestTblCliente {
         */
         
         //testear el listado
-        List<TblCliente> listado=climp.ListarCliente();
+        //List<TblCliente> listado=climp.ListarCliente();
         //aplicamos un bucle for
+        /*
         for(TblCliente lis:listado){
         	//imprimimos por pantalla
         	System.out.println("codigo "+lis.getIdcliente()+
@@ -57,7 +58,12 @@ public class TestTblCliente {
         			" email "+lis.getEmailcliente()+
         			" telefono "+lis.getTelfcliente()+
         			" sexo "+lis.getSexcliente());
-        } //fin del bucle for...
+        }
+        */
+         //fin del bucle for...
+        cliente.setIdcliente(1);
+        TblCliente clienteBuscado = climp.BuscarCliente(cliente);
+        System.out.print(clienteBuscado.toString());
 	} //fin del metodo principal.....
 
 } //fin de la clase...

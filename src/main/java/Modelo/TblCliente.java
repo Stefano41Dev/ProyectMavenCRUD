@@ -15,7 +15,8 @@ public class TblCliente {
 //declaramos los atributos
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idcliente;
+	@Column(name="id_cliente")
+    private int idcliente;
     @Column(name="nombre") //corresponde al campo de la tabla...
 	private String nomcliente;
     @Column(name="apellido")
@@ -24,7 +25,7 @@ public class TblCliente {
 	private String dnicliente;
     @Column(name="sexo")
 	private String sexcliente;
-    @Column(name="telf")
+    @Column(name="telefono")
 	private String telfcliente;
     @Column(name="nacionalidad")
 	private String nacioncliente;
@@ -33,6 +34,14 @@ public class TblCliente {
 	
 	
 	
+	@Override
+	public String toString() {
+		return "TblCliente [idcliente=" + idcliente + ", nomcliente=" + nomcliente + ", apecliente=" + apecliente
+				+ ", dnicliente=" + dnicliente + ", sexcliente=" + sexcliente + ", telfcliente=" + telfcliente
+				+ ", nacioncliente=" + nacioncliente + ", emailcliente=" + emailcliente + "]";
+	}
+
+
 	public TblCliente(int idcliente, String nomcliente, String apecliente, String dnicliente, String sexcliente,
 			String telfcliente, String nacioncliente, String emailcliente) {
 		//super();
